@@ -55,13 +55,13 @@ resume.model = { ...baseInfo };
 
 <style lang="scss" scoped>
 .resume {
-  width: 1200px;
+  width: 1080px;
   text-align: center;
   margin: 0 auto;
   background: var(--el-color-primary);
   padding: 32px;
   &-header {
-    width: 60%;
+    width: 70%;
     height: 200px;
   }
 
