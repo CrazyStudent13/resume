@@ -1,7 +1,8 @@
 <template>
     <div class="cardInfo">
       <h3>项目经历</h3>
-      <p class="projectInfo" v-for="(item, index) in projectExpList" :key="index">
+      <div class="cardInfo-body">
+        <p class="projectInfo" v-for="(item, index) in projectExpList" :key="index">
         <h4>
           <span style="margin-right:10px;">{{ item.name }}</span>
           <span>{{  item.startTime }} ~ {{  item.endTime }}</span>
@@ -14,6 +15,8 @@
           5，培养了可以接手核心合同模块和账单模块的梯队。<br/>
         </p>
       </p>
+      </div>
+
     </div>
   </template>
   

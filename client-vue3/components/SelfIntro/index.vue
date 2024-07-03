@@ -1,7 +1,7 @@
 <template>
     <div class="cardInfo">
       <h3>个人介绍</h3>
-      <ul>
+      <ul class="cardInfo-body">
         <li v-for="(item, index) in SelfIntro" :key="index">
           <span>{{ item }}</span>
         </li>

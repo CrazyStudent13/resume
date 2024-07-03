@@ -1,18 +1,27 @@
 <template>
-  <el-descriptions :column="3" style="margin-top: 32px">
-    <template #title>
-      <h2>{{ baseInfo.jobname }} - {{ baseInfo.name }}</h2>
-    </template>
+  <el-row>
+    <el-col :span="23">
+      <el-descriptions :column="3" style="margin-top: 32px">
+        <template #title>
+          <h2>{{ baseInfo.jobname }} - {{ baseInfo.name }}</h2>
+        </template>
 
-    <el-descriptions-item label="性别">{{ baseInfo.sex }}</el-descriptions-item>
-    <el-descriptions-item label="年龄">{{ baseInfo.age }}岁</el-descriptions-item>
-    <el-descriptions-item label="工作经验">{{ baseInfo.jobAge }}年</el-descriptions-item>
-    <el-descriptions-item label="学历">{{ baseInfo.education }}</el-descriptions-item>
-    <el-descriptions-item label="学校">{{ baseInfo.school }}</el-descriptions-item>
-    <el-descriptions-item label="期望薪资">{{ baseInfo.minSalary }} ~ {{ baseInfo.maxSalary }}</el-descriptions-item>
-    <el-descriptions-item label="期望所在地">{{ baseInfo.expectLocation }}</el-descriptions-item>
-    <el-descriptions-item label="当前所在地">{{ baseInfo.currentLocation }}</el-descriptions-item>
-  </el-descriptions>
+        <el-descriptions-item label="性别">{{ baseInfo.sex }}</el-descriptions-item>
+        <el-descriptions-item label="年龄">{{ baseInfo.age }}岁</el-descriptions-item>
+        <el-descriptions-item label="工作经验">{{ baseInfo.jobAge }}年</el-descriptions-item>
+        <el-descriptions-item label="学历">{{ baseInfo.education }}</el-descriptions-item>
+        <el-descriptions-item label="学校">{{ baseInfo.school }}</el-descriptions-item>
+        <el-descriptions-item label="期望薪资">{{ baseInfo.minSalary }} ~ {{ baseInfo.maxSalary }}</el-descriptions-item>
+        <el-descriptions-item label="期望所在地">{{ baseInfo.expectLocation }}</el-descriptions-item>
+        <el-descriptions-item label="当前所在地">{{ baseInfo.currentLocation }}</el-descriptions-item>
+      </el-descriptions>
+    </el-col>
+    <el-col :span="1">
+      <div class="avatar">
+        <el-avatar class="center-absolute" shape="fill" :size="100" :src="'https://crazystudent13.cn/images/avatar.png '" />
+      </div>
+    </el-col>
+  </el-row>
 </template>
 
 <script setup lang="tsx">
@@ -34,4 +43,18 @@ const baseInfo = {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.avatar {
+  position: relative;
+  width: 300px;
+  height: 100%;
+}
+
+.center-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+</style>
