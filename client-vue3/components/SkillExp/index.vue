@@ -1,13 +1,15 @@
 <template>
   <div class="cardInfo">
     <h3>技能列表</h3>
-    <p v-for="(list, index) in skillList" :key="index">
-      <ul style="text-align:left">
-        <li v-for="(item,skillIndex) in list.data" :key="skillIndex">
-          <span >{{ item }}</span>
-        </li>
-      </ul>
-    </p>
+    <div class="cardInfo-body">
+      <p v-for="(list, index) in skillList" :key="index">
+        <ul style="text-align:left">
+          <li v-for="(item,skillIndex) in list.data" :key="skillIndex">
+            <span >{{ item }}</span>
+          </li>
+        </ul>
+      </p>
+    </div>
   </div>
 </template>
 
