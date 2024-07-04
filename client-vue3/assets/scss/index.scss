@@ -6,9 +6,14 @@ body,
 }
 
 html.dark {
-  background: #f0f9ff;
+  // --el-bg-color: #626aef;
   overflow-x: hidden;
   padding: 0;
+}
+
+#__nuxt{
+  background: var(--el-color-primary);
+  color: black !important;
 }
 
 a {
@@ -21,6 +26,7 @@ a {
   width: 100%;
   text-align: left;
   margin-bottom: 24px;
+  z-index: 9;
   &-body {
     font-size: 14px;
   }

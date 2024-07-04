@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="tsx">
-const educationList = [
+const educationList = reactive<any>([
   {
     school: '南京铁道职业技术学院',
     level: '大专',
@@ -26,7 +26,7 @@ const educationList = [
     startTime: '2023.03',
     endTime: '至今',
   },
-]
+])
 </script>
 
 <style lang="scss" scoped>

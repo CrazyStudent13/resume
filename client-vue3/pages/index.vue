@@ -27,7 +27,10 @@ import Education from '@/components/Education/index.vue'
   width: 840px;
   margin: 0 auto;
   padding: 4px 32px;
-  background: var(--el-color-primary);
+  // background: var(--el-color-primary);
+  background: white;
+  // color:white;
+  color:black;
   text-align: center;
 
   &-header {
