@@ -1,24 +1,63 @@
 <template>
   <el-row>
     <el-col :span="23">
-      <el-descriptions :column="3" style="margin-top: 32px">
-        <template #title>
-          <h2>{{ baseInfo.jobname }} - {{ baseInfo.name }}</h2>
-        </template>
+      <h2 style="text-align: left">{{ baseInfo.jobname }} - {{ baseInfo.name }}</h2>
 
-        <el-descriptions-item label="性别">{{ baseInfo.sex }}</el-descriptions-item>
-        <el-descriptions-item label="年龄">{{ baseInfo.age }}岁</el-descriptions-item>
-        <el-descriptions-item label="工作经验">{{ baseInfo.jobAge }}年</el-descriptions-item>
-        <el-descriptions-item label="学历">{{ baseInfo.education }}</el-descriptions-item>
-        <el-descriptions-item label="学校">{{ baseInfo.school }}</el-descriptions-item>
-        <el-descriptions-item label="期望薪资">{{ baseInfo.minSalary }} ~ {{ baseInfo.maxSalary }}</el-descriptions-item>
-        <el-descriptions-item label="期望所在地">{{ baseInfo.expectLocation }}</el-descriptions-item>
-        <el-descriptions-item label="当前所在地">{{ baseInfo.currentLocation }}</el-descriptions-item>
+      <el-descriptions :column="3" style="margin-top: 32px;">
+        <el-descriptions-item>
+          <template #label>
+            <span class="title">性别</span>
+          </template>
+          <span class="value">{{ baseInfo.sex }}</span>
+        </el-descriptions-item>
+        <el-descriptions-item>
+          <template #label>
+            <span class="title">年龄</span>
+          </template>
+          <span class="value">{{ baseInfo.age }}岁</span>
+        </el-descriptions-item>
+        <el-descriptions-item>
+          <template #label>
+            <span class="title">工作经验</span>
+          </template>
+          <span class="value">{{ baseInfo.jobAge }}年</span>
+        </el-descriptions-item>
+        <el-descriptions-item>
+          <template #label>
+            <span class="title">学历</span>
+          </template>
+          <span class="value">{{ baseInfo.education }}</span>
+        </el-descriptions-item>
+        <el-descriptions-item>
+          <template #label>
+            <span class="title">学校</span>
+          </template>
+          <span class="value">{{ baseInfo.school }}</span>
+        </el-descriptions-item>
+        <el-descriptions-item>
+          <template #label>
+            <span class="title">期望薪资</span>
+          </template>
+          <span class="value">{{ baseInfo.minSalary }} ~ {{ baseInfo.maxSalary }}</span>
+        </el-descriptions-item>
+        <el-descriptions-item>
+          <template #label>
+            <span class="title">期望所在地</span>
+          </template>
+          <span class="value">{{ baseInfo.expectLocation }}</span>
+        </el-descriptions-item>
+        <el-descriptions-item>
+          <template #label>
+            <span class="title">当前所在地</span>
+          </template>
+          <span class="value">{{ baseInfo.currentLocation }}</span>
+        </el-descriptions-item>
       </el-descriptions>
     </el-col>
     <el-col :span="1">
       <div class="avatar">
-        <el-avatar class="center-absolute" shape="fill" :size="100" :src="'https://crazystudent13.cn/images/avatar.png '" />
+        <el-avatar class="center-absolute" shape="fill" :size="100"
+          :src="'https://crazystudent13.cn/images/avatar.png '" />
       </div>
     </el-col>
   </el-row>
@@ -26,7 +65,7 @@
 
 <script setup lang="tsx">
 // 基本信息
-const baseInfo = {
+const baseInfo = reactive<any>({
   name: '叶远川',
   jobname: '前端开发工程师',
   sex: '男',
@@ -40,7 +79,7 @@ const baseInfo = {
   minSalary: '15k',
   maxSalary: '17k',
   education: '大专',
-}
+})
 </script>
 
 <style lang="scss" scoped>
@@ -56,5 +95,16 @@ const baseInfo = {
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+}
+
+
+
+.title {
+  color: black;
+  font-weight: bold;
+}
+
+.value {
+  color: black
 }
 </style>

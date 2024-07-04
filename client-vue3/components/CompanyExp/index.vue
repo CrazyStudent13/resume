@@ -3,7 +3,7 @@
     <h3>工作经历</h3>
 
     <div class="cardInfo-body">
-      <el-table :data="companyInfoList" style="width: 100%">
+      <el-table :data="companyInfoList" style="width: 100%;background: white;">
         <el-table-column prop="date" label="起止时间" width="180">
           <template #default="scope">{{ scope.row.startTime }} ~ {{ scope.row.endTime }}</template>
         </el-table-column>
@@ -15,7 +15,7 @@
 </template>
 
 <script setup lang="tsx">
-const companyInfoList = [
+const companyInfoList = reactive<any>([
   {
     name: '中资科技(江苏)',
     base: '苏州',
@@ -28,7 +28,7 @@ const companyInfoList = [
     startTime: '2024.06',
     endTime: '至今',
   },
-]
+])
 </script>
 
 <style lang="scss" scoped>
