@@ -1,4 +1,5 @@
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
+import path from 'path'
 export default defineNuxtConfig({
   app: {
     // head
@@ -13,11 +14,11 @@ export default defineNuxtConfig({
         },
       ],
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    }
+    },
   },
 
   // css
-  css: ['~/assets/scss/index.scss','~/assets/scss/element/element-ui.scss'],
+  css: ['~/assets/scss/index.scss', '~/assets/scss/element/element-ui.scss'],
 
   typescript: {
     strict: true,
@@ -25,13 +26,7 @@ export default defineNuxtConfig({
   },
 
   // build modules
-  modules: [
-    '@vueuse/nuxt',
-    '@unocss/nuxt',
-    '@pinia/nuxt',
-    '@element-plus/nuxt',
-    '@nuxtjs/color-mode'
-  ],
+  modules: ['@vueuse/nuxt', '@unocss/nuxt', '@pinia/nuxt', '@element-plus/nuxt', '@nuxtjs/color-mode'],
 
   // vueuse
   vueuse: {
@@ -42,7 +37,6 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: '',
   },
-
   unocss: {
     uno: true,
     attributify: true,
