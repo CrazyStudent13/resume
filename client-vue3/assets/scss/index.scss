@@ -6,11 +6,34 @@ body,
 }
 
 html.dark {
-  background: #F0F9FF;
+  // --el-bg-color: #626aef;
+  overflow-x: hidden;
+  padding: 0;
+}
 
+#__nuxt{
+  background: var(--el-color-primary);
+  color: black !important;
 }
 
 a {
   font-weight: 400;
   color: var(--el-color-primary);
+}
+
+.cardInfo {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 24px;
+  z-index: 9;
+  &-body {
+    font-size: 14px;
+  }
+}
+
+ul {
+  li {
+    margin: 8px 0;
+  }
 }
