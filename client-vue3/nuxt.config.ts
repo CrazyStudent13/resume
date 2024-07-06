@@ -1,5 +1,4 @@
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
-import path from 'path'
 export default defineNuxtConfig({
   app: {
     // head
@@ -15,6 +14,7 @@ export default defineNuxtConfig({
       ],
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     },
+    layoutTransition: { name: 'layout', mode: 'out-in' }
   },
 
   // css
