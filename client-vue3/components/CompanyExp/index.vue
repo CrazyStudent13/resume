@@ -3,7 +3,7 @@
     <h3>工作经历</h3>
 
     <div class="cardInfo-body">
-      <el-table :data="companyInfoList" style="width: 100%;background: white;">
+      <el-table :data="company" style="width: 100%;background: white;">
         <el-table-column prop="date" label="起止时间" width="180">
           <template #default="scope">{{ scope.row.startTime }} ~ {{ scope.row.endTime }}</template>
         </el-table-column>
@@ -15,29 +15,8 @@
 </template>
 
 <script setup lang="tsx">
-const companyInfoList = reactive<any>([
-  {
-    name: '中资科技(江苏)',
-    base: '苏州',
-    startTime: '2018.07',
-    endTime: '2023.02',
-  },
-  {
-    name: '双盛科技（小袋鼠徐州分部）',
-    base: '徐州',
-    startTime: '2024.06',
-    endTime: '至今',
-  },
-])
+import { useNuxtStore } from '~/store'
+const store = useNuxtStore()
+console.log()
+const company = store.company
 </script>
-
-<style lang="scss" scoped>
-.companyInfo {
-  span {
-    width: 200px;
-  }
-  &-item {
-    margin-right: 16px;
-  }
-}
-</style>
