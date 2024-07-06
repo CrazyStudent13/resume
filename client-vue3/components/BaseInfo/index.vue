@@ -3,7 +3,7 @@
     <el-col :span="23">
       <h2 style="text-align: left">{{ baseInfo.jobname }} - {{ baseInfo.name }}</h2>
 
-      <el-descriptions :column="3" style="margin-top: 32px;">
+      <el-descriptions :column="3" style="margin-top: 32px">
         <el-descriptions-item>
           <template #label>
             <span class="title">性别</span>
@@ -26,7 +26,7 @@
           <template #label>
             <span class="title">学历</span>
           </template>
-          <span class="value">{{ baseInfo.education }}</span>
+          <span class="value">{{ baseInfo.educationLevel }}</span>
         </el-descriptions-item>
         <el-descriptions-item>
           <template #label>
@@ -56,30 +56,16 @@
     </el-col>
     <el-col :span="1">
       <div class="avatar">
-        <el-avatar class="center-absolute" shape="fill" :size="100"
-          :src="'https://crazystudent13.cn/images/avatar.png '" />
+        <el-avatar class="center-absolute" shape="fill" :size="100" :src="'https://crazystudent13.cn/images/avatar.png '" />
       </div>
     </el-col>
   </el-row>
 </template>
 
 <script setup lang="tsx">
-// 基本信息
-const baseInfo = reactive<any>({
-  name: '叶远川',
-  jobname: '前端开发工程师',
-  sex: '男',
-  age: '29',
-  jobAge: '5',
-  tel: '18650885088',
-  email: 'crazystudent13@qq.com',
-  currentLocation: '苏州（相城区）',
-  school: '南京铁道职业技术学院',
-  expectLocation: '苏州（相城区优先）',
-  minSalary: '15k',
-  maxSalary: '17k',
-  education: '大专',
-})
+import { useNuxtStore } from '~/store'
+const store = useNuxtStore()
+const baseInfo = { ...store }
 </script>
 
 <style lang="scss" scoped>
@@ -97,14 +83,12 @@ const baseInfo = reactive<any>({
   cursor: pointer;
 }
 
-
-
 .title {
   color: black;
   font-weight: bold;
 }
 
 .value {
-  color: black
+  color: black;
 }
 </style>

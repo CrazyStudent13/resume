@@ -1,15 +1,17 @@
-import { useBaseInfoStore } from './modules/baseInfo'
-// const test = useBaseInfoStore
-// console.log(test.sex,'ceshi')
+import { baseUserInfo } from './modules/baseInfo'
+import { companyInfo } from './modules/companyInfo'
+import { educationInfo } from './modules/education'
+import { projectInfo } from './modules/projectInfo'
+import { selfIntroInfo } from './modules/selfIntroInfo'
+import { skillInfo } from './modules/skillInfo'
 
 export const useNuxtStore = defineStore('nuxtStore', {
   state: (): any => ({
-    // test
-    // ...useBaseInfoStore,
+    ...baseUserInfo,
+    ...companyInfo,
+    ...educationInfo,
+    ...projectInfo,
+    ...selfIntroInfo,
+    ...skillInfo,
   }),
-  actions: {
-    // setActiveProductName(name: string) {
-    //   this.activeProductName = name
-    // },
-  },
 })

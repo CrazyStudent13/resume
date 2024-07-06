@@ -20,14 +20,6 @@ import CompanyExp from '@/components/CompanyExp/index.vue'
 import ProjectExp from '@/components/ProjectExp/index.vue'
 import SelfIntro from '@/components/SelfIntro/index.vue'
 import Education from '@/components/Education/index.vue'
-import { useNuxtStore } from '~/store'
-import { useBaseInfoStore } from '~/store/modules/baseInfo'
-const store = useBaseInfoStore()
-console.log(store)
-// const storeAll = useNuxtStore()
-// console.log(storeAll)
-// console.log(storeAll)
-
 </script>
 
 <style lang="scss" scoped>
@@ -35,9 +27,7 @@ console.log(store)
   width: 840px;
   margin: 0 auto;
   padding: 4px 32px;
-  // background: var(--el-color-primary);
   background: white;
-  // color:white;
   color: black;
   text-align: center;
 
