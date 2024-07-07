@@ -9,7 +9,7 @@ export default defineNuxtConfig({
         {
           hid: 'description',
           name: '个人简历的描述',
-          content: 'ElementPlus + Nuxt3',
+          content: 'ElementPlus + Nuxt3 + Pina',
         },
       ],
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
