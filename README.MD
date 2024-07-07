@@ -38,15 +38,5 @@ Nodejs+Express+MySql+vue3+vite
 
 
 
-### 前端运行
-
-```
-
-```
-
-
-
-
-
 ### 技术交流
 
