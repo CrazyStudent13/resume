@@ -20,9 +20,13 @@ pnpm install
 pnpm dev
 ```
 
-### 生产
+### 静态页面生成
+
+因为nuxt项目需要生成静态页面，所以这里不用传统的build命令了，改用generate。
+
+至于为什么不直接用传统的`pnpm g`这种更简短的命令，单纯是我个人觉得这样很cool，哎嘿。
 
 ```bash
-pnpm build
+pnpm generate
 ```
 
