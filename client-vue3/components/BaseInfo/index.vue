@@ -3,7 +3,7 @@
     <el-col :span="23">
       <h2 style="text-align: left">{{ resumeInfo.jobname }} - {{ resumeInfo.name }}</h2>
 
-      <el-descriptions :column="3" style="margin-top: 32px">
+      <el-descriptions :column="2" style="margin-top: 32px">
         <el-descriptions-item>
           <template #label>
             <span class="title">性别</span>
