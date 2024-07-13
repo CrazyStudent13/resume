@@ -24,7 +24,7 @@ import Education from '@/components/Education/index.vue'
 
 <style lang="scss" scoped>
 .resume {
-  width: 840px;
+  width: 750px;
   margin: 0 auto;
   padding: 4px 32px;
   background: white;
