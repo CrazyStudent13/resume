@@ -17,6 +17,5 @@
 <script setup lang="tsx">
 import { useNuxtStore } from '~/store'
 const store = useNuxtStore()
-console.log()
 const company = store.company
 </script>
