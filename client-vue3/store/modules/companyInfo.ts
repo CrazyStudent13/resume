@@ -21,7 +21,7 @@ export const companyInfo = {
       name: '中资科技(江苏)',
       base: '苏州',
       startTime: '2018.07',
-      endTime: '2023.02',
+      endTime: '2024.02',
     },
     {
       name: '双盛科技（小袋鼠徐州分部）',
