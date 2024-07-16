@@ -1,56 +1,56 @@
 <template>
   <el-row>
     <el-col :span="23">
-      <h2 style="text-align: left">{{ baseInfo.jobname }} - {{ baseInfo.name }}</h2>
+      <h2 style="text-align: left">{{ resumeInfo.jobname }} - {{ resumeInfo.name }}</h2>
 
-      <el-descriptions :column="3" style="margin-top: 32px">
+      <el-descriptions :column="2" style="margin-top: 32px">
         <el-descriptions-item>
           <template #label>
             <span class="title">性别</span>
           </template>
-          <span class="value">{{ baseInfo.sex }}</span>
+          <span class="value">{{ resumeInfo.sex }}</span>
         </el-descriptions-item>
         <el-descriptions-item>
           <template #label>
             <span class="title">年龄</span>
           </template>
-          <span class="value">{{ baseInfo.age }}岁</span>
+          <span class="value">{{ resumeInfo.age }}岁</span>
         </el-descriptions-item>
         <el-descriptions-item>
           <template #label>
             <span class="title">工作经验</span>
           </template>
-          <span class="value">{{ baseInfo.jobAge }}年</span>
+          <span class="value">{{ resumeInfo.jobAge }}年</span>
         </el-descriptions-item>
         <el-descriptions-item>
           <template #label>
             <span class="title">学历</span>
           </template>
-          <span class="value">{{ baseInfo.educationLevel }}</span>
+          <span class="value">{{ resumeInfo.educationLevel }}</span>
         </el-descriptions-item>
         <el-descriptions-item>
           <template #label>
             <span class="title">学校</span>
           </template>
-          <span class="value">{{ baseInfo.school }}</span>
+          <span class="value">{{ resumeInfo.school }}</span>
         </el-descriptions-item>
         <el-descriptions-item>
           <template #label>
             <span class="title">期望薪资</span>
           </template>
-          <span class="value">{{ baseInfo.minSalary }} ~ {{ baseInfo.maxSalary }}</span>
+          <span class="value">{{ resumeInfo.minSalary }} ~ {{ resumeInfo.maxSalary }}</span>
         </el-descriptions-item>
         <el-descriptions-item>
           <template #label>
             <span class="title">期望所在地</span>
           </template>
-          <span class="value">{{ baseInfo.expectLocation }}</span>
+          <span class="value">{{ resumeInfo.expectLocation }}</span>
         </el-descriptions-item>
         <el-descriptions-item>
           <template #label>
             <span class="title">当前所在地</span>
           </template>
-          <span class="value">{{ baseInfo.currentLocation }}</span>
+          <span class="value">{{ resumeInfo.currentLocation }}</span>
         </el-descriptions-item>
       </el-descriptions>
     </el-col>
@@ -65,7 +65,7 @@
 <script setup lang="tsx">
 import { useNuxtStore } from '~/store'
 const store = useNuxtStore()
-const baseInfo = { ...store }
+const resumeInfo = { ...store }
 </script>
 
 <style lang="scss" scoped>
